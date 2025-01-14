@@ -440,7 +440,7 @@ function sendEmail(email, token, name) {
       from: '"Instamart_AkashKhare 👻" <akashkhare706882@gmail.com>', // sender address
       to: email, // list of receivers
       subject: "Reset your Account Paasword ✔", // Subject line
-      text: `Hii 😎 ${name} \n 🤖 Please click on the below link to update your Password: \n  💁 "http://localhost:4000/users/resetPassword/${token}"`, // plain text body
+      text: `Hii 😎 ${name} \n 🤖 Please click on the below link to update your Password: \n  💁 "https://socialmediabackend-abt5.onrender.com/users/resetPassword/${token}"`, // plain text body
     });
   
     // console.log("Message sent: %s", info.messageId);
@@ -471,7 +471,7 @@ function registerconfirm(name, email) {
       from: '"Instamart_AkashKhare 👻" <akashkhare706882@gmail.com>', // sender address
       to: email, // list of receivers
       subject: `${name}, Thank you for registering with us ✔`, // Subject line
-      text: `Hii 😎 ${name} \n Yor have successfully created your account 🥳 \n To login your account Click here 💁 "http://localhost:5173/signin"`, // plain text body
+      text: `Hii 😎 ${name} \n Yor have successfully created your account 🥳 \n To login your account Click here 💁 "https://social-media-frontend-ten-liard.vercel.app/signin"`, // plain text body
     });
   
     // console.log("Message sent: %s", info.messageId);
@@ -503,7 +503,7 @@ function loginConfirmation(name, email) {
       from: '"Instamart_AkashKhare 👻" <akashkhare706882@gmail.com>', // sender address
       to: email, // list of receivers
       subject: `${name}, Alerts!!!!!!!!!!!`, // Subject line
-      text: `Hiiii 😎 ${name}, \n We have found a login in your account 🤔 \n If you don't, 🙀 Urgently change your password!!!!!! \n Click here to change Your Password 💁 "http://localhost:5173/signin"`, // plain text body
+      text: `Hiiii 😎 ${name}, \n We have found a login in your account 🤔 \n If you don't, 🙀 Urgently change your password!!!!!! \n Click here to change Your Password 💁 "https://social-media-frontend-ten-liard.vercel.app/signin"`, // plain text body
     });
   
     // console.log("Message sent: %s", info.messageId);
@@ -534,7 +534,7 @@ function changePasswordSuccess(email, name) {
       from: '"Instamart_AkashKhare 👻" <akashkhare706882@gmail.com>', // sender address
       to: email, // list of receivers
       subject: `${name}, Congratulations Password change successfull!!!!`, // Subject line
-      text: `Hiiii 😎 ${name}, \n You have successfully changed your Instamart password linked to  ${email} 🤔 \n Click here to login 💁 "http://localhost:5173/signin"`, // plain text body
+      text: `Hiiii 😎 ${name}, \n You have successfully changed your Instamart password linked to  ${email} 🤔 \n Click here to login 💁 "https://social-media-frontend-ten-liard.vercel.app/signin"`, // plain text body
     });
   
     // console.log("Message sent: %s", info.messageId);
