@@ -19,7 +19,7 @@ let messageRouter = require("./routes/MessageRoute");
 
 app.use(cors(
     {
-        origin: "https://social-media-frontend-ten-liard.vercel.app/",
+        origin: "https://social-media-frontend-ten-liard.vercel.app",
         credentials: true,
         methods: ["get", "post", "put", "delete"]
     }
