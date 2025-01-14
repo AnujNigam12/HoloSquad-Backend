@@ -17,7 +17,12 @@ let postRouter = require("./routes/PostRoute");
 let messageRouter = require("./routes/MessageRoute");
 
 
-app.use(cors());
+app.use(cors(
+    {
+        origin: "https://social-media-frontend-ten-liard.vercel.app/",
+        credentials: true,
+    }
+));
 
 app.use(express.json({limit: "200mb"}));
 
