@@ -2,7 +2,7 @@ const express = require("express");
 
 const { createUser , loginUser, updateUser, deleteUser, forgetPassword, resetPassword, changePassword, getUserDetails, getUserBySearch, getUserById, followFollowings } = require("../controllers/userController");
 const checkToken = require("../middleware/checkToken");
-const { route } = require("./PostRoute");
+
 
 const router = express.Router();
 
