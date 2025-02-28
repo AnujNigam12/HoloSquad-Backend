@@ -3,6 +3,8 @@ const app = express();
 const server = require('http').createServer(app);
 const io = require('socket.io')(server);
 
+require('dotenv').config();
+
 const port = 4000;
 
 const cors = require("cors");
@@ -20,9 +22,8 @@ let messageRouter = require("./routes/MessageRoute");
 app.use(cors(
     {
         origin: [
-            // "https://social-media-frontend-ten-liard.vercel.app",
-            "https://holo-squad.vercel.app",
-            "http://localhost:5173",
+            process.env.VITE_LIVE_API_URL,
+            process.env.VITE_LIVE_API_URL_LOCAL
         ],
         credentials: true,
         methods: ["GET", "POST", "PUT", "DELETE"]
