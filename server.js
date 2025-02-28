@@ -20,7 +20,8 @@ let messageRouter = require("./routes/MessageRoute");
 app.use(cors(
     {
         origin: [
-            "https://social-media-frontend-ten-liard.vercel.app",
+            // "https://social-media-frontend-ten-liard.vercel.app",
+            "https://holo-squad.vercel.app",
             "http://localhost:5173",
         ],
         credentials: true,
