@@ -20,18 +20,18 @@ let messageRouter = require("./routes/MessageRoute");
 let notificationRouter = require("./routes/NotificationRoute");
 
 
-// app.use(cors(
-//     {
-//         origin: [
-//             process.env.VITE_LIVE_API_URL,
-//             process.env.VITE_LIVE_API_URL_LOCAL
-//         ],
-//         credentials: true,
-//         methods: ["GET", "POST", "PUT", "DELETE"]
-//     }
-// ));
+app.use(cors(
+    {
+        origin: [
+            process.env.VITE_LIVE_API_URL,
+            process.env.VITE_LIVE_API_URL_LOCAL
+        ],
+        credentials: true,
+        methods: ["GET", "POST", "PUT", "DELETE"]
+    }
+));
 
-app.use(cors())
+// app.use(cors())
 
 app.use(express.json({ limit: "200mb" }));
 
