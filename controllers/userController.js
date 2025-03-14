@@ -428,7 +428,7 @@ function sendEmail(email, token, name) {
         secure: false, // true for port 465, false for other ports
         auth: {
           user: "holosquadteam165909@gmail.com",
-          pass: "aeqt gpge svcb kzyd",
+          pass: "uull dond psqx uaiy",
         },
       });
 
@@ -459,7 +459,7 @@ function registerconfirm(name, email) {
         secure: false, // true for port 465, false for other ports
         auth: {
           user: "holosquadteam165909@gmail.com",
-          pass: "aeqt gpge svcb kzyd",
+          pass: "uull dond psqx uaiy",
         },
       });
 
@@ -491,7 +491,7 @@ function loginConfirmation(name, email) {
         secure: false, // true for port 465, false for other ports
         auth: {
           user: "holosquadteam165909@gmail.com",
-          pass: "aeqt gpge svcb kzyd",
+          pass: "uull dond psqx uaiy",
         },
       });
 
@@ -522,7 +522,7 @@ function changePasswordSuccess(email, name) {
         secure: false, // true for port 465, false for other ports
         auth: {
           user: "holosquadteam165909@gmail.com",
-          pass: "aeqt gpge svcb kzyd",
+          pass: "uull dond psqx uaiy",
         },
       });
 
