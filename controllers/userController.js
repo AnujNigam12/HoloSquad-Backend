@@ -545,19 +545,12 @@ function changePasswordSuccess(email, name) {
 }
 
 // Suggestion Friend
-const suggestedfriends = async (req, res) => {
+const getAllUsers = async (req, res) => {
   try {
-      const user = await UserCollection.findById(req.params.userId).populate('friends');
-      if (!user) return res.status(404).json({ message: 'User not found' });
-
-      // Exclude current user's friends
-      const suggestedFriends = await UserCollection.find({
-          _id: { $ne: user._id, $nin: user.friends }
-      }).limit(5);
-
-      res.json(suggestedFriends);
+      const users = await UserCollection.find(); // Fetch all users from DB
+      res.status(200).json(users);
   } catch (error) {
-      res.status(500).json({ message: error.message });
+      res.status(500).json({ message: "Error fetching users", error });
   }
 }
 
@@ -574,5 +567,5 @@ module.exports = {
     resetPassword,
     changePassword,
     followFollowings,
-    suggestedfriends
+    getAllUsers
 };
