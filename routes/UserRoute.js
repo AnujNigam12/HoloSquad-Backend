@@ -1,6 +1,6 @@
 const express = require("express");
 
-const { createUser , loginUser, updateUser, deleteUser, forgetPassword, resetPassword, changePassword, getUserDetails, getUserBySearch, getUserById, followFollowings, suggestFriend } = require("../controllers/userController");
+const { createUser , loginUser, updateUser, suggestedfriends , deleteUser, forgetPassword, resetPassword, changePassword, getUserDetails, getUserBySearch, getUserById, followFollowings, suggestFriend } = require("../controllers/userController");
 const checkToken = require("../middleware/checkToken");
 
 
@@ -20,6 +20,7 @@ router.post("/forgetPassword", forgetPassword);
 router.get("/resetPassword/:token", resetPassword);
 router.post("/changePassword/:token", changePassword);
 router.post("/followFollowings/:_id", checkToken, followFollowings);
+router.get('/suggested-friends/:userId', suggestedfriends);
 
 
 module.exports = router;

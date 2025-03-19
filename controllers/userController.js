@@ -545,7 +545,21 @@ function changePasswordSuccess(email, name) {
 }
 
 // Suggestion Friend
+const suggestedfriends = async (req, res) => {
+  try {
+      const user = await UserCollection.findById(req.params.userId).populate('friends');
+      if (!user) return res.status(404).json({ message: 'User not found' });
 
+      // Exclude current user's friends
+      const suggestedFriends = await UserCollection.find({
+          _id: { $ne: user._id, $nin: user.friends }
+      }).limit(5);
+
+      res.json(suggestedFriends);
+  } catch (error) {
+      res.status(500).json({ message: error.message });
+  }
+}
 
 //  All funtion with handle request, response and buisness logic in each function ie here exported for UserRoute ---------------
 module.exports = {
@@ -560,4 +574,5 @@ module.exports = {
     resetPassword,
     changePassword,
     followFollowings,
+    suggestedfriends
 };
