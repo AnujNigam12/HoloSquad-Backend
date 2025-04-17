@@ -33,7 +33,6 @@ const userSchema = new mongoose.Schema({
         default: "https://www.citypng.com/public/uploads/preview/hd-man-user-illustration-icon-transparent-png-701751694974843ybexneueic.png?v=2024122217"
     },
 
-
 }, {timestamps:true});
 
 // useSchema.add will attach reset Password Token for every user with also new user if we manually add in schema then it will add only in new user.

@@ -6,13 +6,6 @@ const checkToken = require("../middleware/checkToken");
 const router = express.Router();
 
 
-
-
-
-
-
-
-
 router.post("/create", checkToken, createPost);
 router.put("/update/:_id", updatePost);
 router.delete("/delete/:_id", deletePost);
@@ -26,6 +19,3 @@ router.get("/getPostById/:postId", getPostById);
 
 
 module.exports = router;
-
-
-
