@@ -21,22 +21,18 @@ let notificationRouter = require("./routes/NotificationRoute");
 let shareRouter = require("./routes/ShareRoute");
 
 
-// app.use(cors(
-//     {
-//         origin: [
-//             process.env.VITE_LIVE_API_URL,
-//             process.env.VITE_LIVE_API_URL_LOCAL
-//         ],
-//         credentials: true,
-//         methods: ["GET", "POST", "PUT", "DELETE"]
-//     }
-// ));
-
-app.use(cors())
+app.use(cors(
+    {
+        origin: [
+            'http://localhost:5173',
+            'holo-squad-frontend.vercel.app'
+        ],
+        credentials: true,
+        methods: ["GET", "POST", "PUT", "DELETE"]
+    }
+));
 
 app.use(express.json({limit: "200mb"}));
-
-
 
 
 app.set("view engine", "ejs");
