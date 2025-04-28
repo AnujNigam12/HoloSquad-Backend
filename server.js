@@ -25,7 +25,7 @@ app.use(cors(
     {
         origin: [
             'http://localhost:5173',
-            'https://holosquad-backend.onrender.com'
+            'https://holo-squad-frontend.vercel.app'
         ],
         credentials: true,
         methods: ["GET", "POST", "PUT", "DELETE"]
